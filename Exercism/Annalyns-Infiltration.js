@@ -26,6 +26,7 @@
  *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
+
 export function canExecuteFastAttack(knightIsAwake) {
     return !knightIsAwake;
   }
@@ -71,6 +72,7 @@ export function canExecuteFastAttack(knightIsAwake) {
    *
    * @returns {boolean} True if Annalyn can free the prisoner, otherwise false.
    */
+  
   export function canFreePrisoner(
     knightIsAwake,
     archerIsAwake,
