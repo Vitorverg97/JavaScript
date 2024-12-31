@@ -79,15 +79,14 @@ export function canExecuteFastAttack(knightIsAwake) {
     prisonerIsAwake,
     petDogIsPresent,
   ) {
-    // Cenário 1: Annalyn tem o cachorro e o arqueiro está dormindo
+    // Scenario 1: Annalyn has the petdog and the archer is sleeping
     const scenarioWithDog = petDogIsPresent && !archerIsAwake;
   
-    // Cenário 2: Annalyn não tem o cachorro, mas o prisioneiro está acordado,
-    // e ambos o cavaleiro e o arqueiro estão dormindo
-    const scenarioWithoutDog = 
-      !petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake;
+    // Scenario 2: Annalyn don't have the petdog presence, but de prisoner is awake,
+    // and they both knight and archer are sleeping
+    const scenarioWithoutDog = !petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake;
   
-    // Annalyn pode resgatar o prisioneiro em qualquer um dos dois cenários
+    // Annalyn can rescue the prisoner in both scenarios
     return scenarioWithDog || scenarioWithoutDog;
   }
   
